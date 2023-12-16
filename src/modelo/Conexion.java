@@ -20,11 +20,12 @@ public class Conexion {
     private final String user = "postgres";
     private final String password = "root";
     private final String url = "jdbc:postgresql://localhost:5432/producto";
+    //private final String url = "jdbc:mysql://localhost:3306/" + base;
     private Connection con = null;
     
     public Connection getConexion(){
         try{
-            //Class.forName("com.postgresql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(this.url, this.user, this.password);
         }catch(SQLException e){
